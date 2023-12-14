@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Blanc */
+    color: #000000; /* Noir */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #FFA500; /* Orange */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000000; /* Noir */
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #000000; /* Noir */
+  }
+  
+  select {
+    appearance: none;
+    background: transparent url('https://cdn.jsdelivr.net/gh/GoogleChrome/ui-element-samples/gh-pages/webcomponents/shadow_dom/css/arrow.png') no-repeat scroll right center;
+    background-size: 12px 12px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  input[type="file"] {
+    border: none;
+    background-color: #f0f0f0; /* Gris clair pour le champ de fichier */
+  }
+  
+  input[type="submit"] {
+    background-color: #FFA500; /* Orange */
+    color: #ffffff; /* Blanc */
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #FF8C00; /* Orange foncé au survol */
+  }
+  
+  /* Styliser les options du menu déroulant */
+  select,
+  input[type="submit"] {
+    padding: 10px;
+    border: none;
+    color: #ffffff; /* Blanc */
+    background-color: #333366; /* Bleu foncé */
+  }
+  
+  /* Styliser les liens */
+  a {
+    color: #0000FF; /* Bleu */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styliser le message d'erreur généré par l'attribut "required" */
+  input:required:invalid,
+  select:required:invalid,
+  textarea:required:invalid {
+    border: 1px solid #FF0000; /* Rouge */
+  }
+  
+  /* Styliser le message de validation généré par l'attribut "required" */
+  input:required:valid,
+  select:required:valid,
+  textarea:required:valid {
+    border: 1px solid #00FF00; /* Vert */
+  }
+  

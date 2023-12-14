@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Inscription à l'ESIC</title>
+</head>
+<body>
+
+  <h1>Formulaire d'Inscription à l'ESIC</h1>
+
+  <!-- Informations Personnelles -->
+  
+  <!-- 
+    Le label pour donner un titre au champ
+    Le input pour saisir les données dans une case identifié par id du label
+    Le maxlength pour limiter le nombre de caractère saisis
+    Le <br> pour l'espace entre les champs
+   -->
+  <label for="nom">Nom :</label>
+  <input type="text" id="nom" name="nom" placeholder="NOM" maxlength="30" required>
+  <br>
+
+  <label for="prenom">Prénom :</label>
+  <input type="text" id="prenom" name="prenom" placeholder="Prénom" maxlength="30" required>
+  <br>
+
+  <label for="dateNaissance">Date de Naissance :</label>
+  <input type="date" id="dateNaissance" name="dateNaissance" required>
+  <br>
+
+  <label for="email">E-mail :</label>
+  <input type="email" id="email" name="email" placeholder="abcd@efg.fr" maxlength="50" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+  <br>
+
+  <label for="telephone">Numéro de Téléphone :</label>
+  <input type="tel" id="telephone" name="telephone" placeholder="0700000000" pattern="[0-9]{10}" maxlength="10" required>
+  <br>
+  <br>
+
+  <!-- 
+    Le select pour des champs à selectionner les options en dessous
+    le requiered pour ne pas laisser le champ vide    
+    -->
+    
+    <!-- Genre -->
+    <label for="genre">Genre :</label>
+    <select id="genre" name="genre" required>
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+    </select>
+    <br>
+    <br>
+    
+    <!-- Choix de Spécialité -->
+    <label for="specialite">Choix de Spécialité :</label>
+    <select id="specialite" name="specialite" required>
+        <option value="BTS_SIO">BTS SIO</option>
+        <option value="BTS_CIEL">BTS CIEL</option>
+        <option value="TSSR">TSSR</option>
+        <option value="CDA">CDA</option>
+        <option value="AIS">AIS</option>
+        <option value="Ingenieur_Affaires">Ingénieur d'Affaires</option>
+        <option value="Responsable_Commercial_Marketing">Responsable Commercial Marketing</option>
+        <option value="BTS_Assistant_Manager">BTS Assistant Manager</option>
+        <option value="BTS_MCO">BTS MCO</option>
+    </select>
+    <br>
+    <br>
+    
+    <!-- 
+      Le select pour des champs à selectionner les options en dessous
+      Le optgroup pour permettre de grouper les options    
+      -->
+
+  <!-- Pays d'Origine -->
+  <label for="paysOrigine">Pays d'Origine :</label>
+  <select id="paysOrigine" name="paysOrigine" required>
+    <!-- Options pour l'Europe -->
+    <optgroup label="Europe">
+      <option value="france">France</option>
+      <option value="portugal">Portugal</option>
+      <option value="espagne">Espagne</option>
+      <option value="russie">Russie</option>
+      <option value="royaume-uni">Royaume-Uni</option>
+    </optgroup>
+
+    <!-- Options pour l'Asie -->
+    <optgroup label="Asie">
+      <option value="chine">Chine</option>
+      <option value="inde">Inde</option>
+      <option value="japon">Japon</option>
+      <option value="corée-du-sud">Corée du Sud</option>
+      <option value="corée-du-nord">Corée-du-Nord</option>
+    </optgroup>
+
+    <!-- Options pour l'Afrique -->
+    <optgroup label="Afrique">
+      <option value="nigeria">Nigeria</option>
+      <option value="afrique-du-sud">Afrique du Sud</option>
+      <option value="algérie">Algérie</option>
+      <option value="egypte">Égypte</option>
+      <option value="maroc">Maroc</option>
+    </optgroup>
+
+    <!-- Options pour l'Amérique -->
+    <optgroup label="Amérique">
+      <option value="etats-unis">États-Unis</option>
+      <option value="canada">Canada</option>
+      <option value="bresil">Brésil</option>
+      <option value="mexique">Mexique</option>
+      <option value="chili">Chili</option>
+    </optgroup>
+  </select>
+  <br>
+  <br>
+
+
+  <!-- Documents Académiques -->
+  <!-- 
+    Le input ci permet grâce à file de uploader des fichiers
+    Le accept pour le type de fichier
+   -->
+  <label for="documentsAcademiques">Téléchargement de Documents Académiques :</label>
+  <input type="file" id="documentsAcademiques" name="documentsAcademiques" accept=".pdf,.doc,.docx" required>
+  <br>
+  <br>
+
+  <!-- Questions Motivationnelles -->
+  <!-- 
+    Le textarea pour la saisie du texte 
+   -->
+  <label for="motivation">Pourquoi avez-vous choisi cette spécialité ?</label>
+  <textarea id="motivation" name="motivation" rows="4" maxlength="1000" required></textarea>
+  <br>
+  <br>
+
+  <label for="ambitions">Quelles sont vos ambitions professionnelles ?</label>
+  <textarea id="ambitions" name="ambitions" rows="4" maxlength="1000" required></textarea>
+  <br>
+  <br>
+
+  <!-- Bouton de Soumission -->
+  <input type="submit" value="Soumettre">
+
+
+</body>
+</html>
